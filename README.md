@@ -49,5 +49,4 @@ Este portafolio tiene un doble propósito:
 
 ## 📬 Contacto
 - GitHub: [@txema741](https://github.com/txema741)  
-- LinkedIn: *(añade cuando lo tengas listo)*  
-- Email: *(puedes añadirlo si quieres dar contacto directo)*  
+
