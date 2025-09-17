@@ -1,7 +1,9 @@
-# Resultados del proyecto Data Agent 360
+# 📂 Carpeta de resultados – Data Agent 360
 
+## 📘 Descripción
 En esta carpeta se guardan los **informes generados automáticamente** por los scripts del proyecto.  
-Cada informe está en formato **Markdown (.md)**, pensado para que se pueda visualizar en GitHub directamente y también exportar a PDF si se requiere.
+Cada informe está en formato **Markdown (.md)**, pensado para visualizarse directamente en GitHub y exportarse a PDF si se requiere.  
+En algunos ejercicios también se generan datasets **limpios o corregidos** en formato Excel (.xlsx).  
 
 ---
 
@@ -27,32 +29,28 @@ Cada informe está en formato **Markdown (.md)**, pensado para que se pueda visu
 
 ---
 
-### ✅ Ejercicio 3 – Control de registros educativos (Draft-then-Revise, DtR)
+### ✅ Ejercicio 3 – Control de registros educativos (DtR)
 - **Script:** `scripts/control_registros.py`  
 - **Dataset:** `data_sample/registros_educativos.xlsx`  
-- **Informe generado:** `results/03_control_registros_result.md`  
+- **Informes generados:**  
+  - `results/03_control_registros_result.md`  
+  - `results/03_registros_educativos_limpio.xlsx`  
 - **Contenido:**  
-  - Primera iteración (*Draft*): detección de duplicados, notas fuera de rango y valores nulos.  
-  - Segunda iteración (*Revise*): validación de fechas de matrícula, normalización de nombres y limpieza definitiva de registros.  
+  - Fase *Draft*: detección de duplicados, notas fuera de rango y valores nulos.  
+  - Fase *Revise*: validación de fechas de matrícula, normalización de nombres y limpieza definitiva de registros.  
 - **Metodología aplicada:** *Draft-then-Revise (DtR)* – Borrador y Revisión.  
-- **Sector aplicado:** Educación, gestión académica y control de calidad de datos.  
+- **Sector aplicado:** Educación y gestión académica.  
 
 ---
 
 ### ✅ Ejercicio 4 – Auditoría de padrones municipales (Self-Consistency)
 - **Script:** `scripts/auditoria_padron.py`  
 - **Dataset:** `data_sample/municipal_padron.xlsx`  
-- **Informe generado:** `results/04_auditoria_padron_result.md`  
+- **Informes generados:**  
+  - `results/04_auditoria_padron_result.md`  
+  - `results/04_padron_limpio.xlsx`  
 - **Contenido:**  
   - Validación de DNIs, edades y fechas de nacimiento.  
   - Coherencia CP–Provincia–Municipio.  
   - Revisión de altas y bajas incoherentes.  
-  - Detección de duplicados y valores vacíos.  
-- **Metodología aplicada:** *Self-Consistency (Auto-consistencia)* – comparación de múltiples rutas de validación.  
-- **Sector aplicado:** Administración pública, gestión municipal y consultoría de datos.  
-
----
-
-## 🎯 Objetivo de esta carpeta
-Centralizar todos los **informes de salida** de los ejercicios y prácticas, mostrando cómo los **scripts Python** se convierten en **herramientas de consultoría y docencia listas para usarse**.
-
+  - Date
