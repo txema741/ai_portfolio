@@ -1,37 +1,31 @@
-# 📑 Resultados – Data Agent 360
+# 📊 Resultados – Data Agent 360
 
-En esta carpeta se recopilan los **informes generados automáticamente** por los scripts del proyecto.  
-Cada informe documenta los hallazgos de auditoría de datos, las anomalías detectadas y las recomendaciones de negocio.
-
----
-
-## 📂 Informes disponibles
-
-### ✅ Ejercicio 1 – Auditoría de Clientes (DSP)
-- **Archivo:** [01_auditoria_clientes_result.md](01_auditoria_clientes_result.md)  
-- **Contenido:**  
-  - Perfil de calidad de los datos (filas, nulos, duplicados exactos y de negocio).  
-  - Detección de ventas negativas y a cero.  
-  - Identificación de outliers estadísticos (IQR).  
-  - Recomendaciones consultivas para directivos.  
+En esta carpeta se guardan los **informes generados automáticamente** por los scripts del proyecto.  
+Cada informe está en formato **Markdown (.md)**, pensado para que se pueda visualizar en GitHub directamente y también exportar a PDF si se requiere.
 
 ---
 
-## 📅 Próximos informes
-Los siguientes ejercicios y proyectos añadirán informes sectoriales en esta carpeta, por ejemplo:
+## 📂 Índice de resultados
 
-- Auditoría de datos en **comercio exterior y riesgo país**.  
-- Evaluación de calidad en **educación y administración pública**.  
-- Casos de uso en **pymes y salud**.  
-
-Cada informe se almacenará con el siguiente formato de nombre:
-NN_tema_result.md
-
-Donde:
-- `NN` = número de ejercicio o proyecto (ejemplo: 02, 03, 04…).  
-- `tema` = área analizada (ejemplo: riesgo_pais, educacion, salud).  
+### ✅ Ejercicio 1 – Auditoría de clientes (DSP)
+- **Script:** `scripts/audit_clientes.py`  
+- **Dataset:** `data_sample/clientes.xlsx`  
+- **Informe generado:** [`results/01_auditoria_clientes_result.md`](01_auditoria_clientes_result.md)  
+- **Contenido:** Detección de duplicados, nulos, ventas negativas, ventas a cero y outliers en datos de clientes.  
+- **Sector aplicado:** PYMEs, consultoría de negocio.  
 
 ---
 
-## 🎯 Objetivo
-Ofrecer un repositorio de resultados **listos para compartir con directivos, docentes o clientes**, garantizando trazabilidad y calidad en el análisis de datos.
+### ✅ Ejercicio 2 – Riesgo País (España, CFS)
+- **Script:** `scripts/audit_riesgo_pais.py`  
+- **Dataset:** `data_sample/riesgo_pais_spain_real.xlsx`  
+- **Informe generado:** [`results/02_riesgo_pais_result.md`](02_riesgo_pais_result.md)  
+- **Contenido:** Evaluación de riesgo país de España usando indicadores oficiales (Eurostat, OCDE, IMF).  
+  - Reglas aplicadas: deuda pública, deuda externa, déficit comercial, inflación, crecimiento del PIB.  
+  - Etiquetado de riesgo: Bajo / Medio / Alto.  
+- **Sector aplicado:** Comercio exterior y riesgo país.  
+
+---
+
+## 🎯 Objetivo de esta carpeta
+Centralizar todos los **informes de salida** de los ejercicios y prácticas, mostrando cómo los scripts Python se convierten en **herramientas de consultoría y docencia** listas para usarse.
