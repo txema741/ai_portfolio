@@ -1,55 +1,53 @@
-# Portafolio Profesional de Inteligencia Artificial
-**Consultoría y Docencia | Agentes empresariales | Entregables listos para dirección**
-
-Este portafolio demuestra capacidades **consultivas** y **docentes** en IA, con foco en **agentes empresariales**, **materiales de aula reutilizables** y **proyectos sectoriales**. Cada repositorio incluye un **README autocontenido con 10 prompts** (técnicas de prompting), proyectos con **entregables ejecutivos** y guías de uso.
-
----
-
-## Propuesta de valor
-- **Impacto inmediato en negocio:** reporting ejecutivo, auditoría de datos, cumplimiento, optimización operativa.
-- **Docencia aplicable:** lecciones, rúbricas, ejercicios y agentes orientados a aula (secundaria, FP, universidad, formación in-company).
-- **Portafolio defendible:** cada proyecto incluye **ventajas, limitaciones, costes (si aplica) y nivel de confianza**.
+# 🌍 AI Portfolio – Consultoría y Docencia en Inteligencia Artificial
+Autor: **Txema Ríos**  
+Usuario GitHub: [@txema741](https://github.com/txema741)
 
 ---
 
-## Índice de repositorios
-> Los prompts de cada asignatura están **dentro del README** del propio repositorio.
-
-1. **Datos** — [datos-ia](./datos-ia)  
-2. **Machine Learning** — [ml-ia](./ml-ia)  
-3. **Deep Learning** — [dl-ia](./dl-ia)  
-4. **IA Generativa** — [generativa-ia](./generativa-ia)  
-5. **Optimización Avanzada** — [optimizacion-ia](./optimizacion-ia)  
-6. **Ética y Legislación** — [etica-ia](./etica-ia)  
-7. **Metodología de Investigación** — [investigacion-ia](./investigacion-ia)  
-8. **Productos y Servicios IA** — [productos-ia](./productos-ia)  
-9. **MLOps** — [mlops-ia](./mlops-ia)  
-10. **Visión Artificial Avanzada** — [vision-ia](./vision-ia)  
-11. **Robótica Inteligente** — [robotica-ia](./robotica-ia)  
-12. **Control Inteligente** — [control-ia](./control-ia)  
-13. **Métodos Avanzados en ML** — [avanzados-ml-ia](./avanzados-ml-ia)  
-14. **Seguridad y Criptografía con IA** — [seguridad-ia](./seguridad-ia)
+## 📌 Sobre este portafolio
+Este portafolio recopila mi formación intensiva en **Inteligencia Artificial aplicada** (consultoría empresarial, docencia y proyectos sectoriales).  
+Cada repositorio refleja un producto real, estructurado para que empresas, instituciones y centros educativos puedan evaluar mi trabajo.  
 
 ---
 
-## Estándares de calidad (auditable)
-- **Rigor:** cuando falte información → **N/D**; si no hay evidencia → **“no sé”**.  
-- **Transparencia:** cada propuesta indica **ventajas, limitaciones, costes, nivel de confianza**.  
-- **Técnicas de prompting (Prompting Guide):**  
-  ZS, FS, **CoT**, **RAG**, **ReAct**, **ToT**, **Chain**, **DSP**, **Ref**, **AC**, **AP**, **Ctr**.  
-- **Ética y cumplimiento:** privacidad, anti-alucinación, citas en RAG, lenguaje claro para ciudadanía.
+## 📂 Proyectos sectoriales
+
+### 🔹 PYMEs – Data Agent 360
+**Repositorio:** [data-agent-360](https://github.com/txema741/data-agent-360)  
+**Descripción:** Auditoría de datos de clientes y ventas, generación de informes ejecutivos y construcción de agentes de apoyo para dirección de PYMEs.  
+
+### 🔹 Comercio Exterior y Riesgo País – Risk & Trade Agent
+**Repositorio:** [risk-trade-agent](https://github.com/txema741/risk-trade-agent)  
+**Descripción:** Análisis de riesgo país, indicadores macroeconómicos y herramientas para apoyar decisiones de exportación e importación.  
+
+### 🔹 Educación – AI Tools for Teachers
+**Repositorio:** [ai-tools-education](https://github.com/txema741/ai-tools-education)  
+**Descripción:** Herramientas de IA para docentes, materiales de clase, corrección automática y generación de ejercicios adaptados.  
+
+### 🔹 Administración Pública – AI Public Sector
+**Repositorio:** [ai-public-sector](https://github.com/txema741/ai-public-sector)  
+**Descripción:** Soluciones de IA para gestión pública, mejora de transparencia y optimización de procesos administrativos.  
 
 ---
 
-## Estructura tipo por repositorio
-```text
-nombre-asignatura/
-├─ README.md                # Introducción + 10 prompts (con técnica) + guía de uso
-├─ projects/
-│  ├─ proyecto-1/
-│  │  ├─ README.md          # Objetivo, uso, entregables, ventajas/limitaciones/coste/confianza
-│  │  └─ samples/           # Opcional: datos ficticios o salidas de ejemplo
-│  ├─ proyecto-2/
-│  │  └─ README.md
-│  └─ ...
-└─ images/                  # Diagramas / capturas (opcional)
+## 📑 Contenidos de cada repositorio
+- `/exercises/` → Ejercicios de prompting avanzado (con metodologías: DSP, CFS, DtR, SC, ReAct, etc.).  
+- `/results/` → Validación de prompts (ejemplo real, crítica, reescritura, nivel de confianza).  
+- `/scripts/` → Código Python comentado en español.  
+- `/data_sample/` → Datasets de ejemplo en formato Excel `.xlsx`.  
+- `/docs/` → Documentación, informes y reportes en Markdown o PDF.  
+- `/images/` → Diagramas o visualizaciones.  
+
+---
+
+## 🚀 Objetivo
+Este portafolio tiene un doble propósito:  
+1. **Consultoría empresarial en IA** → proyectos aplicados a PYMEs, comercio exterior, salud y sector público.  
+2. **Docencia y formación en IA** → materiales pedagógicos, prácticas guiadas y ejercicios listos para el aula.  
+
+---
+
+## 📬 Contacto
+- GitHub: [@txema741](https://github.com/txema741)  
+- LinkedIn: *(añade cuando lo tengas listo)*  
+- Email: *(puedes añadirlo si quieres dar contacto directo)*  
