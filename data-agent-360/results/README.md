@@ -39,5 +39,20 @@ Cada informe está en formato **Markdown (.md)**, pensado para que se pueda visu
 
 ---
 
+### ✅ Ejercicio 4 – Auditoría de padrones municipales (Self-Consistency)
+- **Script:** `scripts/auditoria_padron.py`  
+- **Dataset:** `data_sample/municipal_padron.xlsx`  
+- **Informe generado:** `results/04_auditoria_padron_result.md`  
+- **Contenido:**  
+  - Validación de DNIs, edades y fechas de nacimiento.  
+  - Coherencia CP–Provincia–Municipio.  
+  - Revisión de altas y bajas incoherentes.  
+  - Detección de duplicados y valores vacíos.  
+- **Metodología aplicada:** *Self-Consistency (Auto-consistencia)* – comparación de múltiples rutas de validación.  
+- **Sector aplicado:** Administración pública, gestión municipal y consultoría de datos.  
+
+---
+
 ## 🎯 Objetivo de esta carpeta
-Centralizar todos los **informes de salida** de los ejercicios y prácticas, mostrando cómo los **scripts Python** se convierten en **herramientas de consultoría y docencia listas para usarse**.  
+Centralizar todos los **informes de salida** de los ejercicios y prácticas, mostrando cómo los **scripts Python** se convierten en **herramientas de consultoría y docencia listas para usarse**.
+
