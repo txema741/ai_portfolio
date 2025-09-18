@@ -1,72 +1,59 @@
 
-📘 Ejercicio 6 – Auditoría de Transacciones Bancarias (SMEs, CoT + Rules)
-🎯 Contexto y objetivo
+# 📘 Ejercicio 6 – Auditoría de Transacciones Bancarias
 
-Los bancos y entidades financieras manejan millones de transacciones cada día. La calidad de los datos es crítica para detectar fraudes, evitar duplicidades contables y cumplir con regulaciones.
+**Metodología aplicada:** Chain-of-Thought (CoT) vectorizado + reglas agrupadas  
+**Sector aplicado:** Banca, seguros y consultoría financiera  
 
-👉 El objetivo de este ejercicio es auditar un dataset ficticio de transacciones bancarias para detectar:
+---
 
-Duplicados de transacciones.
+## 🎯 Contexto y objetivo
+Los bancos y entidades financieras procesan millones de transacciones al día. La calidad de los datos es crítica para detectar fraudes, evitar duplicidades contables y cumplir con normativas regulatorias (KYC, AML).  
 
-Importes negativos incoherentes (ej. depósitos con valor negativo).
+👉 En este ejercicio auditamos un dataset ficticio de transacciones para identificar:  
+- **Duplicados** de transacciones  
+- **Importes negativos incoherentes**  
+- **Fechas inválidas** (futuras o anteriores a 2000)  
+- **Monedas inválidas** (distintas de EUR, USD, GBP)  
+- **IBANs inválidos** (longitud incorrecta o vacíos)  
+- **Campos vacíos** (beneficiario, concepto)  
 
-Fechas inválidas (transacción futura o anterior a apertura de cuenta).
+---
 
-Monedas inválidas (distintas de {EUR, USD, GBP}).
+## 🧠 Metodología
+- **CoT vectorizado**: razonamiento paso a paso implementado con reglas vectorizadas para eficiencia.  
+- **Reglas agrupadas en diccionario**: fácil extender o modificar validaciones.  
+- **Duplicados**: detectados tanto por `ID_Transaccion` como por clave `(Cuenta, Fecha, Importe, Beneficiario)`.  
 
-IBANs inválidos (longitud incorrecta o vacíos).
+---
 
-Campos vacíos (concepto, beneficiario).
+## 📂 Estructura del ejercicio
+- **Dataset de entrada:**  
+  `data_sample/transacciones_bancarias.xlsx`  
 
-🧠 Metodología aplicada
+- **Script de auditoría:**  
+  `scripts/auditoria_transacciones.py`  
 
-Chain-of-Thought (CoT) vectorizado:
-Se aplica razonamiento paso a paso, pero implementado en reglas vectorizadas y agrupadas para eficiencia.
+- **Resultados generados:**  
+  - `results/06_auditoria_transacciones_result.md`  
+  - `results/06_transacciones_limpio.xlsx`  
 
-Reglas agrupadas en diccionarios → fácil extender o modificar.
+---
 
-Detección de duplicados por ID_Transacción y por clave (Cuenta, Fecha, Importe, Beneficiario).
+## 📊 Errores introducidos en el dataset
+- Duplicados por **ID** o por clave `(Cuenta, Fecha, Importe, Beneficiario)`  
+- **Importes negativos incoherentes** (ej. ingresos < 0)  
+- **Fechas futuras** o anteriores a 2000  
+- **Monedas inválidas** (ej. “XXX”, vacías)  
+- **IBANs mal formados** (longitud incorrecta, nulos)  
+- **Beneficiario/Concepto vacíos**  
 
-🏦 Sector aplicado
+---
 
-Banca y seguros
+## ▶️ Ejecución
+Desde la raíz del proyecto:  
+```bash
+python scripts/auditoria_transacciones.py
 
-Consultoría financiera
+[OK] Informe generado: results/06_auditoria_transacciones_result.md
+[OK] Dataset marcado/limpio: results/06_transacciones_limpio.xlsx
 
-Proyectos de cumplimiento regulatorio (KYC/AML, auditoría interna)
-
-📂 Estructura del Ejercicio 6
-
-Dataset de ejemplo
-data_sample/transacciones_bancarias.xlsx
-Columnas:
-ID_Transaccion, Cuenta_IBAN, Fecha, Importe, Moneda, Beneficiario, Concepto
-
-Script Python
-scripts/auditoria_transacciones.py
-
-Carga dataset
-
-Aplica reglas de auditoría optimizadas
-
-Exporta dataset con banderas + informe en Markdown
-
-Salidas
-
-results/06_auditoria_transacciones_result.md
-
-results/06_transacciones_limpio.xlsx
-
-📊 Errores introducidos en el dataset
-
-Duplicados: mismos ID o misma clave (Cuenta, Fecha, Importe, Beneficiario).
-
-Importes negativos incoherentes (ej. ingresos < 0).
-
-Fechas futuras o anteriores a 2000.
-
-Monedas inválidas (ej. “XXX”, vacíos).
-
-IBANs mal formados (menos de 24 caracteres, nulos).
-
-Beneficiario/Concepto vacíos.
