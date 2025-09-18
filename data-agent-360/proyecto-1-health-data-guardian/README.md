@@ -32,6 +32,8 @@ proyecto-1-health-data-guardian/
 ├─ README.md           → documentación principal
 └─ requirements.txt    → dependencias mínimas (pandas, numpy)
 
+
+
 ## ▶️ Ejecución
 
 Ejecutar desde la raíz del proyecto:
