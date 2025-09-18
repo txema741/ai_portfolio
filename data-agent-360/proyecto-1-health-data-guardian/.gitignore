@@ -1,1 +1,17 @@
+# Carpetas de Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+
+# Archivos de resultados
+results/*.csv
+results/*.json
+results/*.md
+results/clean/*.csv
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
 
