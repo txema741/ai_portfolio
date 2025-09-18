@@ -52,4 +52,13 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 - **Informes:**  
   - `results/05_auditoria_ehr_result.md`  
   - `results/05_historias_clinicas_limpio.xlsx`  
-- **Descripción:** Auditoría clínica: duplicados, fechas incoherentes (alta < ingreso), ICD-10 inválidos, edades imposibles y campos vacíos.  
+- **Descripción:** Auditoría clínica: duplicados, fechas incoherentes (alta < ingreso), ICD-10 inválidos, edades imposibles y campos vacíos.
+
+- ## 🔹 Ejercicio 6 – Auditoría de Transacciones Bancarias (CoT vectorizado)
+Archivo: `scripts/auditoria_transacciones.py`  
+Metodología: Chain-of-Thought vectorizado + reglas agrupadas  
+Dataset: `data_sample/transacciones_bancarias.xlsx`  
+Informes:  
+- `results/06_auditoria_transacciones_result.md`  
+- `results/06_transacciones_limpio.xlsx`  
+Descripción: Detecta duplicados, fechas incoherentes, monedas inválidas, IBAN incorrec
