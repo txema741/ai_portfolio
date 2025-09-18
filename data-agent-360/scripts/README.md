@@ -5,7 +5,7 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 
 ---
 
-## 🔹 Ejercicio 1 – Auditoría de Clientes (DSP)
+🔹 **Ejercicio 1 – Auditoría de Clientes (DSP)**  
 - **Archivo:** `scripts/audit_clientes.py`  
 - **Metodología:** Directional Stimulus Prompting (DSP)  
 - **Dataset:** `data_sample/clientes.xlsx`  
@@ -14,7 +14,7 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 
 ---
 
-## 🔹 Ejercicio 2 – Riesgo País (España, CFS)
+🔹 **Ejercicio 2 – Riesgo País (España, CFS)**  
 - **Archivo:** `scripts/audit_riesgo_pais.py`  
 - **Metodología:** Contrastive Few-Shot (CFS)  
 - **Dataset:** `data_sample/riesgo_pais_spain_real.xlsx`  
@@ -23,7 +23,7 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 
 ---
 
-## 🔹 Ejercicio 3 – Control de Registros Educativos (DtR)
+🔹 **Ejercicio 3 – Control de Registros Educativos (DtR)**  
 - **Archivo:** `scripts/control_registros.py`  
 - **Metodología:** Draft-then-Revise (DtR)  
 - **Dataset:** `data_sample/registros_educativos.xlsx`  
@@ -34,7 +34,7 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 
 ---
 
-## 🔹 Ejercicio 4 – Auditoría de Padrones Municipales (Self-Consistency)
+🔹 **Ejercicio 4 – Auditoría de Padrones Municipales (Self-Consistency)**  
 - **Archivo:** `scripts/auditoria_padron.py`  
 - **Metodología:** Self-Consistency (Auto-consistencia)  
 - **Dataset:** `data_sample/municipal_padron.xlsx`  
@@ -45,20 +45,44 @@ Cada script toma un dataset de `data_sample/` y genera informes en `results/`.
 
 ---
 
-## 🔹 Ejercicio 5 – Auditoría de Historias Clínicas (EHR, CoT)
+🔹 **Ejercicio 5 – Auditoría de Historias Clínicas (EHR, CoT)**  
 - **Archivo:** `scripts/auditoria_ehr.py`  
 - **Metodología:** Chain-of-Thought (CoT)  
 - **Dataset:** `data_sample/historias_clinicas.xlsx`  
 - **Informes:**  
   - `results/05_auditoria_ehr_result.md`  
   - `results/05_historias_clinicas_limpio.xlsx`  
-- **Descripción:** Auditoría clínica: duplicados, fechas incoherentes (alta < ingreso), ICD-10 inválidos, edades imposibles y campos vacíos.
+- **Descripción:** Auditoría clínica: duplicados, fechas incoherentes (alta < ingreso), ICD-10 inválidos, edades imposibles y campos vacíos.  
 
-- ## 🔹 Ejercicio 6 – Auditoría de Transacciones Bancarias (CoT vectorizado)
-Archivo: `scripts/auditoria_transacciones.py`  
-Metodología: Chain-of-Thought vectorizado + reglas agrupadas  
-Dataset: `data_sample/transacciones_bancarias.xlsx`  
-Informes:  
-- `results/06_auditoria_transacciones_result.md`  
-- `results/06_transacciones_limpio.xlsx`  
-Descripción: Detecta duplicados, fechas incoherentes, monedas inválidas, IBAN incorrec
+---
+
+🔹 **Ejercicio 6 – Auditoría de Transacciones Bancarias (CoT vectorizado)**  
+- **Archivo:** `scripts/auditoria_transacciones.py`  
+- **Metodología:** Chain-of-Thought vectorizado + reglas agrupadas  
+- **Dataset:** `data_sample/transacciones_bancarias.xlsx`  
+- **Informes:**  
+  - `results/06_auditoria_transacciones_result.md`  
+  - `results/06_transacciones_limpio.xlsx`  
+- **Descripción:** Detecta duplicados, fechas incoherentes, monedas inválidas, IBAN incorrectos, importes incoherentes y campos vacíos.  
+
+---
+
+🔹 **Ejercicio 7 – Auditoría de Envíos y Trazabilidad Logística (Self-Consistency + CoT)**  
+- **Archivo:** `scripts/auditoria_envios.py`  
+- **Metodología:** Self-Consistency + Chain-of-Thought (CoT) vectorizado  
+- **Dataset:** `data_sample/envios_logistica.xlsx`  
+- **Informes:**  
+  - `results/07_auditoria_envios_result.md`  
+  - `results/07_envios_limpio.xlsx`  
+- **Descripción:** Auditoría logística: duplicados, fechas incoherentes, CP–Ciudad inconsistentes, transportistas inválidos, pesos/volúmenes imposibles y registros incompletos.  
+
+---
+
+🔹 **Ejercicio 8 – Auditoría de Pólizas y Siniestros de Seguros (Self-Consistency + CoT vectorizado)**  
+- **Archivo:** `scripts/auditoria_seguro.py`  
+- **Metodología:** Self-Consistency + CoT vectorizado  
+- **Dataset:** `data_sample/polizas_siniestros.xlsx`  
+- **Informes:**  
+  - `results/08_auditoria_seguro_result.md`  
+  - `results/08_polizas_siniestros_limpio.xlsx`  
+- **Descripción:** Auditoría de pólizas y siniestros: duplicados, fechas incoherentes, montos fuera de rango, tipos de póliza inválidos y campos vacíos.  
