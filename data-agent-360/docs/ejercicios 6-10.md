@@ -255,5 +255,69 @@ La **calidad del dato** es clave para:
 
 ---
 
+📘 Ejercicio 10 – Auditoría de Inventarios y Cadenas de Suministro
+🎯 Contexto y objetivo
 
+Las empresas industriales y de retail gestionan inventarios complejos: materias primas, productos en proceso y artículos terminados en múltiples almacenes.
+Los errores en estos datos generan roturas de stock, sobrecostes logísticos y pérdidas financieras.
+
+👉 El objetivo de este ejercicio es auditar un dataset ficticio de inventarios, detectando:
+
+Duplicados por ID_Producto/Almacén.
+
+Cantidades negativas o incoherentes.
+
+Fechas de entrada/salida imposibles (ej. salida antes de la entrada).
+
+Códigos de producto inválidos.
+
+Precios unitarios anómalos.
+
+Almacenes no registrados.
+
+🧠 Metodología aplicada
+
+ReAct (Reason + Act)
+
+El sistema combina razonamiento paso a paso con acciones concretas:
+
+Detectar anomalías.
+
+Razonar su impacto en la cadena de suministro.
+
+Marcar banderas de error en el dataset.
+
+🏭 Sector aplicado
+
+Industria manufacturera
+
+Retail
+
+Consultoría logística y SCM
+
+📂 Estructura del ejercicio
+
+Dataset de entrada: data_sample/inventarios.xlsx
+
+Script Python: scripts/auditoria_inventarios.py
+
+Resultados esperados:
+
+results/10_auditoria_inventarios_result.md
+
+results/10_inventarios_limpio.xlsx
+
+📑 Reglas de auditoría
+
+Duplicados: (ID_Producto, ID_Almacén, Fecha_Entrada)
+
+Fechas: Fecha_Salida ≥ Fecha_Entrada, ambas en rango [2000, 2050]
+
+Cantidades: >0 y ≤ 100.000 unidades
+
+Precios unitarios: >0 y ≤ 10.000 €/unidad
+
+Códigos de producto: Formato PRD-XXXXX (5 dígitos)
+
+Almacén: debe existir en catálogo de almacenes válidos
 
