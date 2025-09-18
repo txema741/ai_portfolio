@@ -1,32 +1,95 @@
-# 📂 Carpeta de datasets – Data Agent 360
+# 📂 Carpeta de Datasets – Data Agent 360
 
-Datasets de entrada para los ejercicios.  
-Cada archivo es un **Excel (.xlsx)** con errores intencionales para probar la auditoría.
+En esta carpeta se almacenan los **datasets sintéticos** utilizados en los diferentes ejercicios del proyecto.  
+Todos los ficheros están generados con errores intencionales para poder probar los procesos de auditoría.  
 
 ---
 
-## Ejercicio 1 – Auditoría de Clientes (DSP)
-- `clientes.xlsx` → Duplicados, nulos, ventas negativas/cero y outliers.  
+## ✅ Ejercicio 1 – Auditoría de Clientes
+- **Archivo:** `clientes.xlsx`  
+- **Contenido:**  
+  Base de datos de clientes de PYMEs con errores comunes.  
+- **Errores introducidos:**  
+  - Duplicados de clientes  
+  - Ventas negativas  
+  - Ventas en cero  
+  - Valores nulos  
+  - Outliers en importes de venta  
 
-## Ejercicio 2 – Riesgo País (CFS)
-- `riesgo_pais_spain_real.xlsx` → Indicadores macroeconómicos de España con umbrales de riesgo.  
+---
 
-## Ejercicio 3 – Registros Educativos (DtR)
-- `registros_educativos.xlsx` → Notas fuera de rango, fechas inválidas, duplicados y vacíos.  
+## ✅ Ejercicio 2 – Riesgo País (España)
+- **Archivo:** `riesgo_pais_spain_real.xlsx`  
+- **Contenido:**  
+  Indicadores económicos de España (Eurostat, OCDE, IMF).  
+- **Errores introducidos:**  
+  - Registros con deuda pública, déficit, inflación o PIB fuera de rango  
+  - Clasificación de riesgo: Bajo / Medio / Alto  
 
-## Ejercicio 4 – Padrones Municipales (Self-Consistency)
-- `municipal_padron.xlsx` → DNIs inválidos, CP incoherentes, municipios fuera de provincia, fechas imposibles, duplicados.  
+---
 
-## Ejercicio 5 – Historias Clínicas (EHR, CoT)
-- `historias_clinicas.xlsx` → Registros clínicos con duplicados, edades imposibles, fechas incoherentes, diagnósticos vacíos y códigos ICD-10 inválidos.  
+## ✅ Ejercicio 3 – Control de Registros Educativos
+- **Archivo:** `registros_educativos.xlsx`  
+- **Contenido:**  
+  Base de datos de estudiantes, asignaturas y calificaciones.  
+- **Errores introducidos:**  
+  - Estudiantes duplicados  
+  - Notas fuera de rango (>10)  
+  - Fechas inválidas de matrícula  
+  - Campos vacíos en asignaturas o calificaciones  
 
-## Ejercicio 6 – Transacciones Bancarias (CoT vectorizado)
-- `transacciones_bancarias.xlsx`  
-- Columnas: `ID_Transaccion, Cuenta_IBAN, Fecha, Importe, Moneda, Beneficiario, Concepto`  
-- Errores introducidos:  
-  - Duplicados por ID y por clave `(Cuenta, Fecha, Importe, Beneficiario)`  
-  - Fechas futuras o <2000  
-  - Importes incoherentes (ej. ingresos negativos)  
+---
+
+## ✅ Ejercicio 4 – Auditoría de Padrones Municipales
+- **Archivo:** `municipal_padron.xlsx`  
+- **Contenido:**  
+  Registro ficticio de habitantes en un municipio.  
+- **Errores introducidos:**  
+  - DNIs inválidos o vacíos  
+  - CP incoherente con provincia  
+  - Municipios fuera de la provincia  
+  - Fechas imposibles (nacimientos en 2050, edades >120 años)  
+  - Fechas de baja anteriores a la de alta  
+  - Sexo inválido (ejemplo: “X”)  
+
+---
+
+## ✅ Ejercicio 5 – Auditoría de Historias Clínicas (EHR)
+- **Archivo:** `historias_clinicas.xlsx`  
+- **Contenido:**  
+  Registros médicos de pacientes.  
+- **Errores introducidos:**  
+  - Pacientes duplicados  
+  - Altas anteriores al ingreso  
+  - Diagnósticos vacíos  
+  - Códigos ICD-10 inválidos  
+  - Edades imposibles o fechas de nacimiento erróneas  
+
+---
+
+## ✅ Ejercicio 6 – Auditoría de Transacciones Bancarias
+- **Archivo:** `transacciones_bancarias.xlsx`  
+- **Contenido:**  
+  Dataset de operaciones financieras (ingresos, transferencias, pagos).  
+- **Errores introducidos:**  
+  - Duplicados por ID y clave  
+  - Fechas futuras y anteriores a 2000  
+  - Importes incoherentes (ingresos negativos)  
   - Monedas inválidas (XXX, vacías)  
-  - IBAN mal formado o vacío  
-  - Beneficiario/Concepto vacíos
+  - IBAN mal formados  
+  - Beneficiario o Concepto vacíos  
+
+---
+
+## ✅ Ejercicio 7 – Auditoría de Envíos y Trazabilidad Logística
+- **Archivo:** `envios_logistica.xlsx`  
+- **Contenido:**  
+  Envíos de paquetes con datos de trazabilidad.  
+- **Errores introducidos:**  
+  - Duplicados por ID y por clave `(Fecha_Envio, Destinatario, Dirección, CP)`  
+  - Fechas incoherentes (entrega antes del envío, fechas futuras en 2050)  
+  - CP–Ciudad no coincidentes  
+  - Transportistas inválidos (ej. “XXX Transportes”)  
+  - Pesos ≤ 0 o > 50.000 kg  
+  - Volúmenes ≤ 0 o > 500 m³  
+  - Destinatario/Dirección vacíos  
