@@ -54,6 +54,83 @@ Desde la raíz del proyecto:
 python scripts/auditoria_transacciones.py
 
 Salidas esperadas
-[OK] Informe generado: results/06_auditoria_transacciones_result.md
-[OK] Dataset marcado/limpio: results/06_transacciones_limpio.xlsx
+Informe generado: results/06_auditoria_transacciones_result.md
+Dataset marcado/limpio: results/06_transacciones_limpio.xlsx
+
+# 📘 Ejercicio 7 – Auditoría de Envíos y Trazabilidad Logística
+
+**Metodología aplicada:** Self-Consistency + Chain-of-Thought híbrido  
+**Sector aplicado:** Logística, transporte y supply chain  
+
+---
+
+## 🎯 Contexto y objetivo
+Las empresas de **logística y transporte** gestionan miles de envíos diarios. La calidad de los datos es crítica para:  
+- Asegurar entregas puntuales.  
+- Reducir incidencias (pérdidas, retrasos, entregas fallidas).  
+- Cumplir con la trazabilidad exigida por clientes y reguladores.  
+
+👉 En este ejercicio auditaremos un dataset ficticio de **envíos** para detectar:  
+- **Duplicados** de envíos.  
+- **Fechas incoherentes** (entrega antes del envío).  
+- **CP y ciudades no coincidentes**.  
+- **Transportistas inválidos** (fuera del catálogo permitido).  
+- **Pesos y volúmenes imposibles** (negativos o excesivos).  
+- **Campos vacíos** en dirección de entrega o destinatario.  
+
+---
+
+## 🧠 Metodología
+- **Self-Consistency + Chain-of-Thought híbrido**:  
+  Varias rutas de validación (fechas, CP–ciudad, pesos, duplicados) consolidadas por votación mayoritaria para reducir falsos positivos.  
+- **Vectorización** de reglas para eficiencia.  
+- **Claves de duplicado**:  
+  - `(ID_Envio)`  
+  - `(Fecha_Envio, Destinatario, Dirección, CP)`  
+
+---
+
+## 🚚 Sector aplicado
+- Logística de última milla  
+- Transporte y distribución nacional/internacional  
+- Consultoría de supply chain y optimización logística  
+
+---
+
+## 📂 Estructura del ejercicio
+
+- **Dataset de ejemplo**  
+  `data_sample/envios_logistica.xlsx`  
+  Columnas esperadas:  
+  - `ID_Envio`  
+  - `Fecha_Envio`  
+  - `Fecha_Entrega`  
+  - `CP`  
+  - `Ciudad`  
+  - `Transportista`  
+  - `Peso_kg`  
+  - `Volumen_m3`  
+  - `Destinatario`  
+  - `Dirección`  
+
+- **Script Python**  
+  `scripts/auditoria_envios.py`  
+  - Carga el dataset.  
+  - Aplica reglas de auditoría optimizadas.  
+  - Genera informe en Markdown y dataset limpio con banderas de error.  
+
+- **Salidas esperadas**  
+  - `results/07_auditoria_envios_result.md`  
+  - `results/07_envios_limpio.xlsx`  
+
+---
+
+## 📊 Errores introducidos en el dataset
+- Duplicados por **ID_Envio** y por clave `(Fecha_Envio, Destinatario, Dirección, CP)`.  
+- **Fechas incoherentes**: entrega anterior al envío, o fechas en el futuro extremo (ej. año 2050).  
+- **CP–Ciudad no coincidentes** (ejemplo: CP 28001 con ciudad “Barcelona”).  
+- **Transportistas inválidos** (ejemplo: “XXX Transportes”).  
+- **Pesos o volúmenes imposibles** (≤ 0, o > 50.000 kg / 500 m³).  
+- **Campos vacíos** en `Destinatario` o `Dirección`.  
+
 
