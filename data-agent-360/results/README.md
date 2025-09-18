@@ -58,7 +58,13 @@ Los datasets corregidos se exportan en Excel (`.xlsx`) con banderas de error par
   - `results/05_historias_clinicas_limpio.xlsx`  
 - **Contenido:** Detección de duplicados, fechas incoherentes (alta < ingreso), códigos ICD-10 inválidos, edades imposibles y campos vacíos (diagnóstico, tratamiento).  
 - **Metodología:** Chain-of-Thought (CoT) – razonamiento paso a paso.  
-- **Sector aplicado:** Sanidad pública/privada y proyectos de salud digital.  
+- **Sector aplicado:** Sanidad pública/privada y proyectos de salud digital.
+
+- ## ✅ Ejercicio 6 – Auditoría de Transacciones Bancarias (CoT vectorizado)
+Informes:  
+- `results/06_auditoria_transacciones_result.md`  
+- `results/06_transacciones_limpio.xlsx`  
+Contenido: detección de duplicados, fechas incoherentes, monedas inválidas, IBAN incorrectos, importes incoherentes y campos vacíos.
 
 ---
 
