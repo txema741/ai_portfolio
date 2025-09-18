@@ -14,7 +14,7 @@ Cada repositorio refleja un **producto real**, estructurado para que **empresas,
 ## 📂 Proyectos sectoriales
 
 🔹 **PYMEs – Data Agent 360**  
-- **Repositorio:** [data-agent-360](https://github.com/txema741/ai_portfolio/data-agent-360)  
+- **Repositorio:** [data-agent-360](https://github.com/txema741/ai_portfolio/tree/main)  
 - **Descripción:** Auditoría de datos de clientes y ventas, generación de informes ejecutivos y construcción de agentes de apoyo para dirección de PYMEs.  
 
 ---
