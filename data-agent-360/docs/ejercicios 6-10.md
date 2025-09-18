@@ -132,5 +132,3 @@ Las empresas de **logística y transporte** gestionan miles de envíos diarios. 
 - **Transportistas inválidos** (ejemplo: “XXX Transportes”).  
 - **Pesos o volúmenes imposibles** (≤ 0, o > 50.000 kg / 500 m³).  
 - **Campos vacíos** en `Destinatario` o `Dirección`.  
-
-
