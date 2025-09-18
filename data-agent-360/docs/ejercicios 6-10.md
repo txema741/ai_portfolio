@@ -46,17 +46,7 @@ Los bancos y entidades financieras procesan millones de transacciones al día. L
 - **IBANs mal formados** (longitud incorrecta, nulos)  
 - **Beneficiario/Concepto vacíos**  
 
----
-
-## ▶️ Ejecución
-Desde la raíz del proyecto:  
-```bash
-python scripts/auditoria_transacciones.py
-
-Salidas esperadas
-Informe generado: results/06_auditoria_transacciones_result.md
-Dataset marcado/limpio: results/06_transacciones_limpio.xlsx
-
+--.
 # 📘 Ejercicio 7 – Auditoría de Envíos y Trazabilidad Logística
 
 **Metodología aplicada:** Self-Consistency + Chain-of-Thought híbrido  
@@ -132,3 +122,6 @@ Las empresas de **logística y transporte** gestionan miles de envíos diarios. 
 - **Transportistas inválidos** (ejemplo: “XXX Transportes”).  
 - **Pesos o volúmenes imposibles** (≤ 0, o > 50.000 kg / 500 m³).  
 - **Campos vacíos** en `Destinatario` o `Dirección`.  
+
+
+
