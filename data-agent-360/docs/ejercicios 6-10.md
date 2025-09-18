@@ -1,4 +1,3 @@
-
 # 📘 Ejercicio 6 – Auditoría de Transacciones Bancarias
 
 **Metodología aplicada:** Chain-of-Thought (CoT) vectorizado + reglas agrupadas  
@@ -54,6 +53,7 @@ Desde la raíz del proyecto:
 ```bash
 python scripts/auditoria_transacciones.py
 
+Salidas esperadas
 [OK] Informe generado: results/06_auditoria_transacciones_result.md
 [OK] Dataset marcado/limpio: results/06_transacciones_limpio.xlsx
 
