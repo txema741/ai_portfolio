@@ -188,4 +188,5 @@ python scripts/auditoria_seguro.py
 ✅ Salidas esperadas
 
 Informe generado: results/08_auditoria_seguro_result.md
+
 Dataset marcado/limpio: results/08_polizas_siniestros_limpio.xlsx
