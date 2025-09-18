@@ -16,7 +16,7 @@ Cada ejercicio muestra cómo aplicar metodologías avanzadas de **prompting y va
 - **/data_sample/** → Datasets sintéticos de ejemplo (Excel con errores introducidos).  
 - **/scripts/** → Scripts en Python (100% comentados en español).  
 - **/results/** → Informes en Markdown y datasets corregidos.  
-- **/docs/** → Documentación metodológica y consultiva (manuales, guías de prompting, casos sectoriales).  
+- **/ejercicios/** → Estructura de los ejercicios.  
 - **/images/** → Diagramas y visualizaciones.  
 - **/datos-ia/** → Carpeta extra para pruebas, materiales complementarios o datasets adicionales.  
 
