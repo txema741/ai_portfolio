@@ -93,3 +93,16 @@ Todos los ficheros están generados con errores intencionales para poder probar 
   - Pesos ≤ 0 o > 50.000 kg  
   - Volúmenes ≤ 0 o > 500 m³  
   - Destinatario/Dirección vacíos  
+
+---
+
+## ✅ Ejercicio 8 – Auditoría de Pólizas y Siniestros de Seguros
+- **Archivo:** `polizas_siniestros.xlsx`  
+- **Contenido:**  
+  Dataset ficticio de pólizas y siniestros en una aseguradora.  
+- **Errores introducidos:**  
+  - Pólizas duplicadas por ID y clave `(Asegurado, Tipo_Poliza, Fecha_Poliza)`  
+  - Fechas incoherentes (siniestro antes de la póliza, fechas futuras en 2050)  
+  - Montos inválidos (negativos o mayores que la póliza)  
+  - Tipos de póliza inválidos (ejemplo: “Test”, “XXX”)  
+  - Beneficiarios o descripciones vacías  
