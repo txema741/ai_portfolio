@@ -123,5 +123,69 @@ Las empresas de **logística y transporte** gestionan miles de envíos diarios. 
 - **Pesos o volúmenes imposibles** (≤ 0, o > 50.000 kg / 500 m³).  
 - **Campos vacíos** en `Destinatario` o `Dirección`.  
 
+# 📘 Ejercicio 8 – Auditoría de Pólizas y Siniestros de Seguros
 
+**Metodología aplicada:** Self-Consistency + CoT vectorizado  
+**Sector aplicado:** Seguros, consultoría actuarial y gestión de riesgos  
+
+---
+
+## 🎯 Contexto y objetivo
+Las compañías de **seguros** gestionan miles de pólizas y siniestros cada año.  
+La **calidad de los datos** es fundamental para:  
+- Evitar fraudes o duplicidades.  
+- Asegurar la coherencia en la gestión de pólizas.  
+- Cumplir con requisitos legales y regulatorios.  
+
+👉 En este ejercicio auditaremos un dataset ficticio de **pólizas y siniestros** para detectar:  
+- Pólizas duplicadas o con inconsistencias.  
+- Fechas incoherentes (siniestro antes de la póliza, fechas futuras extremas).  
+- Montos de siniestros fuera de rango (ej. negativos o excesivos).  
+- Tipos de póliza inválidos o vacíos.  
+- Campos vacíos en asegurado, beneficiario o descripción del siniestro.  
+
+---
+
+## 📂 Archivos vinculados
+- **Dataset de entrada:** `data_sample/polizas_siniestros.xlsx`  
+- **Script:** `scripts/auditoria_seguro.py`  
+- **Salidas generadas:**  
+  - `results/08_auditoria_seguro_result.md`  
+  - `results/08_polizas_siniestros_limpio.xlsx`  
+
+---
+
+## 🧪 Reglas de auditoría implementadas
+- **Fechas**
+  - `Fecha_Poliza` no nula.  
+  - `Fecha_Siniestro` no nula.  
+  - `Fecha_Siniestro` ≥ `Fecha_Poliza`.  
+  - Fechas en rango válido [2000, 2050].  
+
+- **Montos**
+  - `Monto_Poliza` > 0.  
+  - `Monto_Siniestro` ≥ 0 y ≤ `Monto_Poliza`.  
+
+- **Tipos de póliza**
+  - Deben pertenecer al catálogo definido: {Auto, Hogar, Vida, Salud, Viaje}.  
+
+- **Completitud**
+  - `Asegurado` no vacío.  
+  - `Beneficiario` no vacío.  
+  - `Descripción_Siniestro` no vacía.  
+
+- **Duplicados**
+  - Por **ID_Poliza**.  
+  - Por clave funcional `(Asegurado, Tipo_Poliza, Fecha_Poliza)`.  
+
+---
+
+## 🖥️ Ejecución del script
+Desde la raíz del proyecto:  
+
+```bash
+python scripts/auditoria_seguro.py
+✅ Salidas esperadas
+Informe generado: results/08_auditoria_seguro_result.md
+Dataset marcado/limpio: results/08_polizas_siniestros_limpio.xlsx
 
