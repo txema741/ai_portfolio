@@ -19,7 +19,7 @@ Su objetivo es demostrar cómo la IA y la programación pueden ayudar a garantiz
 ---
 
 ## 📂 Estructura del proyecto
-```bash
+
 proyecto-1-health-data-guardian/
 ├─ data_sample/        → datasets sintéticos con errores intencionados
 │   └─ pacientes_sinteticos.csv
