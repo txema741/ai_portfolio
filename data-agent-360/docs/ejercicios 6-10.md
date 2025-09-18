@@ -191,4 +191,77 @@ Informe generado: results/08_auditoria_seguro_result.md
 
 Dataset marcado/limpio: results/08_polizas_siniestros_limpio.xlsx
 
+# 📘 Ejercicio 9 – Auditoría de Consumos Energéticos y Facturación Eléctrica
+
+**Metodología aplicada:** Self-Consistency + CoT vectorizado  
+**Sector aplicado:** Energía (utilities), facturación y eficiencia energética
+
+---
+
+## 🎯 Contexto y objetivo
+Las comercializadoras y auditoras energéticas gestionan miles de puntos de suministro (CUPS) con facturas mensuales.  
+La **calidad del dato** es clave para:
+- Evitar errores de facturación y reclamaciones.
+- Detectar consumos anómalos (fraude, averías, lecturas mal registradas).
+- Cumplir auditorías y reporting regulatorio.
+
+👉 En este ejercicio auditaremos un dataset ficticio de **consumos y facturas eléctricas** para detectar:
+- Duplicados de facturas.
+- Fechas y periodos incoherentes.
+- **CUPS** mal formados.
+- **CP–Provincia** incoherentes.
+- **Tarifas** inválidas.
+- **Consumos/Importes** imposibles o desproporcionados.
+- **kW contratada** inválida.
+- Campos vacíos críticos (Cliente, Dirección).
+
+---
+
+## 📂 Archivos vinculados
+- **Dataset de entrada:** `data_sample/consumos_energia.xlsx`  
+- **Script:** `scripts/auditoria_energia.py`  
+- **Salidas generadas:**  
+  - `results/09_auditoria_energia_result.md`  
+  - `results/09_consumos_energia_limpio.xlsx`
+
+---
+
+## 🧪 Reglas de auditoría implementadas
+- **Fechas & Periodos**
+  - `Fecha_Factura` no nula y en rango [2000, 2050].
+  - `Periodo` mensual válido en formato `YYYY-MM` y coherente con `Fecha_Factura`.
+  - No se permiten dos facturas **(ID_Factura)** iguales ni **(ID_Contrato, Periodo)** repetidos.
+
+- **Identificadores energéticos**
+  - `CUPS` no vacío y con patrón **ES** + 18–20 caracteres alfanuméricos (validación de forma, sin checksum).
+  - `Tarifa` ∈ {2.0TD, 3.0TD, 3.0A, 6.1TD} (catálogo demo; ampliable).
+
+- **Coherencia geográfica**
+  - `CP–Provincia` coherente según mapa (demo incluido en script para principales provincias).
+  - `Dirección` y `Cliente` no vacíos.
+
+- **Magnitudes técnicas y económicas**
+  - `kWh` > 0 y ≤ 20.000 por mes (umbral configurable).
+  - `kW_Contratada` > 0 y ≤ 100 (umbral configurable).
+  - `Importe_Factura` > 0.
+  - **Regla de plausibilidad económica**: `Importe_Factura` ≈ `kWh * precio_estimado` (precio base por defecto: 0,20 €/kWh).  
+    - Se marca **sospechoso** si sale del rango [0,6 × kWh, 0,6; 0,35 × kWh, 0,35] (ejemplo: [0,12; 0,35] €/kWh).  
+    - Considera peajes/impuestos de manera laxa (check de plausibilidad, no exacto).
+
+- **Outliers técnicos**
+  - Detección de outliers por percentiles (p99) para `kWh` y `Importe_Factura` (marcados como **pico_anómalo**).
+
+> Todas las reglas están vectorizadas; las “rutas” (fechas, CUPS, CP–Provincia, tarifas, consumos, importes) se combinan para un **`flags_total`** por registro y la etiqueta **`registro_valido`**.
+
+---
+
+## 🖥️ Ejecución del script
+Desde la raíz del proyecto:
+
+```bash
+python scripts/auditoria_energia.py
+
+✅ Salidas esperadas
+
+results/09_auditoria_energia_result.md
 
