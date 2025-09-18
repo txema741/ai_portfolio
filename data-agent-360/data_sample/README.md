@@ -105,4 +105,33 @@ Todos los ficheros están generados con errores intencionales para poder probar 
   - Fechas incoherentes (siniestro antes de la póliza, fechas futuras en 2050)  
   - Montos inválidos (negativos o mayores que la póliza)  
   - Tipos de póliza inválidos (ejemplo: “Test”, “XXX”)  
-  - Beneficiarios o descripciones vacías  
+  - Beneficiarios o descripciones vacías
+ 
+  - ---
+
+## ✅ Ejercicio 9 – Auditoría de Consumos Energéticos
+- **Archivo:** `consumos_energia.xlsx`  
+- **Contenido:**  
+  Dataset de consumos eléctricos mensuales de clientes.  
+- **Errores introducidos:**  
+  - Duplicados por `(ID_Cliente, Periodo)`  
+  - Periodos inválidos (`YYYY-MM` mal formateado o fuera de rango)  
+  - Consumos negativos o superiores a 1.000.000 kWh  
+  - Costes incoherentes (importe ≤ 0 o excesivo)  
+  - Tarifas inválidas (ejemplo: “XXX”, vacías)  
+  - Clientes vacíos o inexistentes  
+
+---
+
+## ✅ Ejercicio 10 – Auditoría de Inventarios y Cadenas de Suministro
+- **Archivo:** `inventarios.xlsx`  
+- **Contenido:**  
+  Registros de entradas y salidas de productos en distintos almacenes.  
+- **Errores introducidos:**  
+  - Duplicados por `(ID_Producto, ID_Almacén, Fecha_Entrada)`  
+  - Fechas incoherentes (salida < entrada) o fuera de rango (antes del 2000 o en 2055)  
+  - Cantidades negativas o mayores a 100.000 unidades  
+  - Precios unitarios negativos o > 10.000 €/unidad  
+  - Códigos de producto inválidos (ejemplo: “12345”, “PRDX-12345”)  
+  - Almacenes no registrados (ejemplo: “ALM-99X”, “ALMX-01”)  
+
