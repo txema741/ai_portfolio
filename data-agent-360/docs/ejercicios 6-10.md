@@ -255,13 +255,5 @@ La **calidad del dato** es clave para:
 
 ---
 
-## 🖥️ Ejecución del script
-Desde la raíz del proyecto:
 
-```bash
-python scripts/auditoria_energia.py
-
-✅ Salidas esperadas
-
-results/09_auditoria_energia_result.md
 
