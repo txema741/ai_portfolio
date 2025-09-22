@@ -1,0 +1,17 @@
+patient_id,nombre,edad,sexo,altura_cm,peso_kg,imc,tension_sistolica,tension_diastolica,frecuencia_cardiaca,glucosa_mg_dl,colesterol_total,diagnosticos,medicacion,fecha_ultima_visita,correo,telefono,codigo_postal
+1,Ana Gómez,29,F,165,60,22.0,118,76,72,88,180,"hipotiroidismo",levotiroxina,2025-08-10,ana.gomez@example.com,+34 600 123 456,28001
+2,Luis Pérez,42,M,178,85,26.8,130,85,80,102,220,"diabetes tipo 2",metformina,2025-09-15,luis.perez@example,600-222-333,08002
+3,María López,NaN,F,160,55,,115,74,70,92,170,,vitamina D,2026-01-05,maria.lopez@example.com,+34 601 111 111,2800A
+4,Juan Ruiz,17,M,172,70,23.7,95,60,55,65,140,"asma",salbutamol,2025-02-30,juan.ruiz@@example.com,0034 700 000 000,41010
+5,Carmen Díaz,85,F,150,40,17.8,180,110,110,180,300,"HTA; EPOC","enalapril; salmeterol",2024-12-20,carmen.diaz@example.com,+34 622 222 222,15003
+6,Pedro Martín,52,M,0,95,29.2,125,82,78,98,210,"obesidad",orlistat,2025-07-12,pedro.martin@example.com,invalid,28001
+7,Laura Núñez,34,F,170,120,41.5,200,130,45,60,500,"ansiedad",,2025-09-10,laura.nunez@example.com,+34 633 333 333,46001
+8,Óscar Vega,42,M,185,85,24.8,118,76,72,88,180,"hipotiroidismo",levotiroxina,2025-08-10,oscar.vega@example.com,+34 600 123 456,28001
+8,Óscar Vega,42,M,185,85,24.8,118,76,72,88,180,"hipotiroidismo",levotiroxina,2025-08-10,oscar.vega@example.com,+34 600 123 456,28001
+9,Elena Soto,150,F,160,45,17.6,105,70,65,85,160,,"",2025-09-12,elena.soto@example.com,+34 644 444 444,28002
+10,Ramón Gil,38,M,175,80,24.0,115,75,70,95,190,"hipertension",enalapril,2025-09-19,ramon.gil@example.com,+34 655 555 555,28003
+11,Silvia Martín,28,F,162,54,20.6,110,70,68,85,170,"migraña","ibuprofeno (exceso)",2025-09-05,silvia.martin@example.com,34 666 666 666,28004
+12,Test Futuro,30,M,180,75,23.1,120,80,70,90,180,, ,2027-01-01,test@example.com,+34 677 777 777,28005
+13,Valores Cero,40,M,170,0,0,0,0,0,0,0,, ,2025-08-01,zero@example.com,+34 688 888 888,28006
+14,Fecha Pasada,50,F,165,65,23.9,120,80,70,90,180,, ,2010-01-01,pasada@example.com,+34 699 999 999,28007
+15,Email Malo,33,M,172,72,24.3,118,76,72,88,180,, ,2025-09-10,email.malo@,000,28008
