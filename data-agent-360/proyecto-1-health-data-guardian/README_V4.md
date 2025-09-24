@@ -1,97 +1,55 @@
-# 🤖 Proyecto 1 – Health Data Guardian (V4 Extractivo)
+# 🤖 Health Data Guardian – V4 (Agente Extractivo sin descargas)
 
-Esta versión añade un **agente conversacional ligero y determinista**, que responde preguntas en lenguaje natural sobre los resultados de auditoría.  
-A diferencia de otros agentes que dependen de modelos grandes o APIs de pago, esta versión es **100% local, sin descargas adicionales, rápida y ejecutable en cualquier ordenador**.
+Agente conversacional **ligero** que responde preguntas sobre los resultados de auditoría leyendo:
+- `results/issues_detectados.csv`
+- `results/profile.json`
+- `results/analyst_summary.md` (opcional, de V3)
 
----
+No usa modelos generativos ni APIs. **No descarga nada**.
 
-## 🚀 Novedades de V4
-- Interfaz conversacional con **Streamlit**.
-- Sin dependencias pesadas: solo `pandas` y `streamlit`.
-- Respuestas **extractivas y basadas en reglas**:
-  - Total de incidencias.
-  - Campo con más errores.
-  - Errores por tipo y por campo.
-  - Ejemplos de incidencias por campo.
-  - Filas y columnas del dataset.
-  - Recomendaciones rápidas (a partir de los tipos de incidencias detectadas).
-- Opcional: búsqueda de palabras clave en el informe `analyst_summary.md`.
-
----
-
-## 📂 Estructura del proyecto (añadidos en V4)
-
-proyecto-1-health-data-guardian/
-├─ apps/
-│ └─ ai_agent/
-│ └─ agent_extractive.py # agente conversacional ligero
-├─ results/
-│ ├─ issues_detectados.csv # generado en V1 o V2
-│ ├─ profile.json # generado en V1 o V2
-│ ├─ analyst_summary.md # generado en V3
-│ └─ ...
-├─ requirements_v4.txt # dependencias mínimas
-└─ README_V4.md
-
-
----
-
-## 🔧 Requisitos
-
-Instalar dependencias mínimas:
-
+## ▶️ Ejecución
 ```bash
-pip install pandas streamlit
-
-Contenido de requirements_v4.txt:
-
-pandas
-streamlit
-
-▶️ Ejecución del agente
-
-Ejecutar desde la raíz del proyecto:
-
+pip install -r requirements_v4.txt
 streamlit run apps/ai_agent/agent_extractive.py
 
+Abre: http://localhost:8501
 
-Abrir en el navegador: http://localhost:8501
+❓ Ejemplos de preguntas
 
-Tú: ¿Qué campo tiene más errores?
-🤖: El campo con más errores es **correo** (18 incidencias).
+¿Qué campo tiene más errores?
 
-Tú: ¿Cuántos errores hay en total?
-🤖: Total de incidencias: 73
+Errores por tipo
 
-Tú: Dame ejemplos del campo codigo_postal
-🤖:
-Ejemplos para `codigo_postal`:
- row campo tipo   detalle
-  3  codigo_postal formato  2800A
-  7  codigo_postal formato  123
+Errores por campo
 
-Limitaciones del V4 extractivo
+Ejemplos campo correo
 
-No usa modelos generativos → no “redacta” respuestas largas, solo devuelve fragmentos y reglas predefinidas.
+¿Cuántas filas y columnas tiene el dataset?
 
-No entiende preguntas demasiado abiertas o ambiguas.
+Recomendaciones
 
-El valor está en que es rápido, transparente y ejecutable en cualquier máquina sin coste adicional.
+🧩 Notas
 
-🔮 Extensiones futuras
+Necesitas haber ejecutado V1/V2 (y V3 si quieres usar el summary) para que existan archivos en results/.
 
-Sustituir el motor extractivo por un LLM local (ej. HuggingFace, Flan-T5).
+Este agente es determinista y auditables (rule-based). Ideal para entornos con poca memoria o sin Internet.
 
-Integrar embeddings (FAISS + SentenceTransformers) para mejorar la búsqueda semántica.
+Se puede extender a embeddings/LLM si el cliente lo requiere (V4 avanzado).
 
-Versión API → conectar el agente con sistemas externos.
+---
 
-📌 Conclusión: con este V4, el proyecto Health Data Guardian ya cubre el ciclo completo:
+# ▶️ Cómo lanzarlo (resumen)
 
-V1: CLI para auditar y limpiar datos.
+1) Instala deps mínimas:
+```bash
+pip install -r requirements_v4.txt
+Asegúrate de tener results/issues_detectados.csv y results/profile.json (ejecuta V1/V2 antes).
 
-V2: Dashboard interactivo en Streamlit.
+Ejecuta:streamlit run apps/ai_agent/agent_extractive.py
+Navega a http://localhost:8501 y pregunta cosas como:
 
-V3: Analista heurístico que resume hallazgos.
+“¿Qué campo tiene más errores?”
 
-V4: Agente conversacional extractivo, ligero y extensible.
+“Errores por tipo”
+
+“Ejemplos campo correo”
