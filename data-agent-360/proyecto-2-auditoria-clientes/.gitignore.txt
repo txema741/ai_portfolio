@@ -1,20 +1,43 @@
-# Python
+# --- Archivos de Python ---
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.venv/
-venv/
-.env
+*.pkl
+*.egg-info/
+*.egg
+
+# --- Notebooks ---
 .ipynb_checkpoints/
 
-# Data/outputs
-results/*.csv
-results/*.md
-results/*.png
-results/*.pdf
-results/*.html
+# --- Entornos virtuales ---
+.env
+.venv
+env/
+venv/
+ENV/
 
-# OS
+# --- Archivos temporales del sistema ---
 .DS_Store
 Thumbs.db
+
+# --- Resultados generados automáticamente ---
+results/*.csv
+results/*.md
+results/*.xlsx
+results/*.json
+results/*.png
+
+# --- Datos limpios (generados por scripts) ---
+clean/*.csv
+
+# --- Archivos de logs ---
+*.log
+
+# --- Dependencias locales ---
+requirements-dev.txt
+
+# --- Archivos de configuración personal ---
+.vscode/
+.idea/
+
