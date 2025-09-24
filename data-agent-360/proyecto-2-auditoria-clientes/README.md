@@ -1,99 +1,53 @@
-# Proyecto 2 — Auditoría de Clientes con IA
+# 🏥 Proyecto 1 – Health Data Guardian
 
-**Metodología:** DSP (*Directional Stimulus Prompting – Estímulo Direccional de Prompting*)  
+Este proyecto forma parte del portfolio **Data Agent 360** y aplica técnicas de **auditoría y calidad de datos** en el sector sanitario.
 
-Este proyecto implementa una **auditoría de calidad de datos** sobre una base de clientes, detectando:
+## 🎯 Objetivo
+Construir un agente de IA para auditar registros clínicos, capaz de:
+- Detectar valores faltantes en datos médicos.
+- Identificar inconsistencias en diagnósticos, edades o géneros.
+- Localizar duplicados en registros de pacientes.
+- Evaluar riesgos asociados a la baja calidad de los datos clínicos.
 
-- Valores faltantes, **duplicados**, **inconsistencias** y **formatos inválidos**.  
-- Problemas típicos en **PII (*Personally Identifiable Information – Información de Identificación Personal*)** como emails y teléfonos.  
-- Reglas de negocio (fechas imposibles, códigos de país inválidos, etc.).  
-
----
-
-## 🎯 Objetivos
-1. Generar un **informe reproducible** con incidencias: `results/issues_detectados.csv`.  
-2. Producir un **reporte narrativo**: `results/reporte_clientes.md` con **KPIs (*Key Performance Indicators – Indicadores Clave de Desempeño*)** de calidad.  
-3. Documentar el uso de **DSP** como técnica conceptual para guiar validaciones semánticas.
-
----
+La metodología aplicada es **Health Data Guardian (HDG)**, un **MVP (*Minimum Viable Product – Producto Mínimo Viable*)** diseñado para mostrar la utilidad de la auditoría automatizada en salud.
 
 ## 📂 Estructura del proyecto
-proyecto-2-auditoria-clientes/
-├─ data_sample/
-│ └─ clientes_sinteticos.csv
-├─ scripts/
-│ └─ audit_clientes.py
-├─ results/
-│ ├─ issues_detectados.csv
-│ └─ reporte_clientes.md
-├─ docs/
-│ └─ metodologia_dsp.md
-├─ images/ # (opcional para gráficos)
-├─ clean/ # (datasets limpios post-ETL)
-├─ README.md
-├─ requirements.txt
-└─ .gitignore
+
+proyecto-1-health-data-guardian/
+│── data_sample/ # Datos clínicos sintéticos
+│── scripts/ # Scripts de auditoría
+│── results/ # Resultados de la auditoría
+│── docs/ # Documentación técnica
+│── images/ # Visualizaciones y diagramas
+│── clean/ # Datos corregidos
 
 
----
+## 🚀 Uso
+Ejecutar el script principal sobre el dataset de ejemplo:
 
-## ▶️ Ejecución rápida
 ```bash
-python scripts/audit_clientes.py \
-  --input data_sample/clientes_sinteticos.csv \
-  --outdir results
+python scripts/health_audit.py --input data_sample/pacientes_sinteticos.csv --outdir results
 
-Entradas y salidas
+📊 Resultados
 
-Entrada:
-data_sample/clientes_sinteticos.csv (CSV – Comma-Separated Values – Valores Separados por Comas).
+results/issues_detectados.csv: errores de calidad encontrados.
 
-Salidas:
+results/reporte_health_audit.md: informe con métricas e interpretación.
 
-results/issues_detectados.csv — registro fila a fila de todas las incidencias.
+clean/pacientes_limpios.csv: dataset depurado.
 
-results/reporte_clientes.md — resumen ejecutivo + métricas de calidad.
+🛠️ Requisitos
 
-🔍 Validaciones implementadas
-
-Campos obligatorios: id_cliente, nombre, email, telefono, pais, fecha_alta.
-
-Email (regex); Teléfono (longitud mínima configurable).
-
-País (lista ISO – International Organization for Standardization – Organización Internacional de Normalización básica ampliable).
-
-Fechas (formato ISO YYYY-MM-DD).
-
-Duplicados por email y telefono.
-
-Reglas de plausibilidad (ej. fecha_alta no futura).
-
-⚙️ Requisitos
-
-Instala dependencias con:
+Instalar dependencias con:
 
 pip install -r requirements.txt
 
-🧠 Nota sobre DSP
+📚 Documentación
 
-Se usa DSP (Directional Stimulus Prompting – Estímulo Direccional de Prompting) como guía conceptual para:
+En la carpeta docs/ se incluye la descripción del MVP y su alcance.
 
-Diseñar ejemplares positivos/negativos que inspiran reglas.
+📌 Notas
 
-Traducir heurísticas en comprobaciones programáticas (ver docs/metodologia_dsp.md).
+Los datos son sintéticos y no representan pacientes reales.
 
-📜 Glosario de siglas
-
-DSP — Directional Stimulus Prompting – Estímulo Direccional de Prompting
-
-KPI — Key Performance Indicator – Indicador Clave de Desempeño
-
-PII — Personally Identifiable Information – Información de Identificación Personal
-
-GDPR — General Data Protection Regulation – Reglamento General de Protección de Datos
-
-ISO — International Organization for Standardization – Organización Internacional de Normalización
-
-CSV — Comma-Separated Values – Valores Separados por Comas
-
-ETL — Extract, Transform, Load – Extraer, Transformar y Cargar
+Proyecto orientado a fines educativos y de portfolio profesional.
