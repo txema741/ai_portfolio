@@ -14,11 +14,17 @@ La metodología aplicada es **Health Data Guardian (HDG)**, un **MVP (*Minimum V
 ## 📂 Estructura del proyecto
 
 proyecto-1-health-data-guardian/
+
 │── data_sample/ # Datos clínicos sintéticos
+
 │── scripts/ # Scripts de auditoría
+
 │── results/ # Resultados de la auditoría
+
 │── docs/ # Documentación técnica
+
 │── images/ # Visualizaciones y diagramas
+
 │── clean/ # Datos corregidos
 
 
