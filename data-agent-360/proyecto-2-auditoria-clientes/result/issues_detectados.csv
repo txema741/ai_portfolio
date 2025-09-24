@@ -1,18 +1,11 @@
-row,field,issue
-2,email,email_invalido
-10,email,email_invalido
-14,email,email_invalido
-11,telefono,telefono_invalido
-12,telefono,telefono_invalido
-11,telefono,valor_faltante
-12,pais,pais_no_iso
-2,fecha_alta,fecha_formato_invalido
-4,fecha_alta,fecha_futura
-4,email,duplicado
-7,email,duplicado
-8,email,duplicado
-15,email,duplicado
-4,telefono,duplicado
-7,telefono,duplicado
-8,telefono,duplicado
-15,telefono,duplicado
+fila,columna,tipo_error,detalle
+,cliente_id,columna_faltante,Falta columna obligatoria 'cliente_id'.
+,ingreso_anual,columna_faltante,Falta columna obligatoria 'ingreso_anual'.
+8.0,nombre,valor_nulo_vacio,Valor nulo o vacío en columna obligatoria.
+10.0,telefono,valor_nulo_vacio,Valor nulo o vacío en columna obligatoria.
+1.0,email,email_invalido,Email no válido: luis.gomez@ejemplo
+9.0,email,email_invalido,Email no válido: camila.soto@@example.com
+13.0,email,email_invalido,Email no válido: paula.rey@example
+10.0,telefono,telefono_invalido,Teléfono no válido (patrón laxo v1): nan
+11.0,telefono,telefono_invalido,Teléfono no válido (patrón laxo v1): 12345
+1.0,fecha_alta,formato_invalido,"Esperado YYYY-MM-DD, recibido: 2024-02-30"
