@@ -1,0 +1,16 @@
+id_cliente,nombre,email,telefono,pais,fecha_alta,notas
+1,Ana Pérez,ana.perez@example.com,34600111222,ES,2024-01-15,Cliente VIP
+2,Luis Gómez,luis.gomez@ejemplo,600222333,ES,2024-02-30,Fecha inválida
+3,María López,maria.lopez@example.com,+525512345678,MX,2023-11-20,Ok
+4,Juan Ruiz,juan.ruiz@example.com,0034612345678,ES,2025-12-01,Fecha futura
+5,Sara Díaz,sara.diaz@example.com,351912345678,PT,2023-05-10,Ok
+6,Pedro Ortega,pedro.ortega@example.com,+34 612-34-56,ES,2024-03-05,Formato tel irregular
+7,Lucía Mora,lucia.mora@example.com,5491123456789,AR,2022-09-09,Ok
+8,Lucía Mora,lucia.mora@example.com,5491123456789,AR,2022-09-09,Duplicado exacto
+9,,sin.nombre@example.com,34600999888,ES,2024-04-12,Nombre faltante
+10,Camila Soto,camila.soto@@example.com,571301234567,CO,2023-07-07,Email con doble @
+11,Hugo Vega,hugo.vega@example.com,,ES,2024-05-21,Teléfono faltante
+12,Noelia Gil,noelia.gil@example.com,12345,ZZ,2023-08-18,País inválido
+13,Bruno Neri,bruno.neri@example.com,+39-06-123456,IT,2024-02-10,Ok
+14,Paula Rey,paula.rey@example,0034-600-333-444,ES,2024-06-01,Email sin TLD
+15,Test Dup,juan.ruiz@example.com,0034612345678,ES,2024-06-10,Email duplicado con id 4
