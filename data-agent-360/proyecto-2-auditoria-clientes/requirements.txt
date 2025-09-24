@@ -1,3 +1,16 @@
-pandas>=2.1
-python-dateutil>=2.9
-pytest>=8.0
+# Librerías principales para auditoría de datos
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Manejo de argumentos en línea de comandos
+argparse>=1.4.0
+
+# Visualización y gráficos (para results/images)
+matplotlib>=3.7.0
+
+# Validación y análisis adicional
+openpyxl>=3.1.0   # Exportar/leer Excel
+tabulate>=0.9.0   # Tablas bonitas en reportes Markdown
+
+# Opcional: para generar reportes en Markdown/HTML más avanzados
+markdown>=3.4.0
